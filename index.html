@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meer Offerte-afspraken | AI-Gestuurd Appointment Setting</title>
+    <style>
+        :root { --primary: #0066cc; --secondary: #00a86b; --dark: #333333; --light: #f8f9fa; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { line-height: 1.6; color: var(--dark); background-color: white; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, #004499 100%); color: white; padding: 120px 0 80px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; }
+        .cta-button { display: inline-block; background: var(--secondary); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
+        .cta-button:hover { background: #008a55; }
+        .steps { padding: 80px 0; background: var(--light); }
+        .steps h2 { text-align: center; margin-bottom: 3rem; color: var(--dark); }
+        .step-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .step { flex: 1; min-width: 250px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+        .step-number { background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; }
+        .pricing { padding: 80px 0; text-align: center; }
+        .pricing-card { background: white; border: 2px solid var(--primary); border-radius: 8px; padding: 40px; max-width: 500px; margin: 0 auto; }
+        .price { font-size: 2.5rem; color: var(--primary); font-weight: bold; margin: 15px 0; }
+        .faq { padding: 80px 0; background: var(--light); }
+        .faq h2 { text-align: center; margin-bottom: 3rem; }
+        .faq-item { background: white; margin-bottom: 15px; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .form-section { padding: 80px 0; text-align: center; }
+        .form-container { background: white; max-width: 500px; margin: 0 auto; padding: 30px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        .checkbox { display: flex; align-items: flex-start; gap: 10px; }
+        .checkbox input { width: auto; margin-top: 5px; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 30px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ZONNEPANEELAFSPRAKEN.NL</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Meer Offerte-afspraken. Zonder Maandelijkse Kosten.</h1>
+            <p>Wij vullen uw agenda met serieuze, lokale klanten via AI-gestuurde telefoontjes. <strong>U betaalt alleen voor afspraken die daadwerkelijk doorgaan.</strong></p>
+            <a href="#intake" class="cta-button">Plan Gratis Intake</a>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2>Hoe het werkt</h2>
+            <div class="step-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Wij genereren leads</h3>
+                    <p>Via gerichte Facebook/Instagram ads bereiken we huiseigenaren in uw regio die interesse hebben in zonnepanelen.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Onze AI belt direct</h3>
+                    <p>Onze telefoon-AI belt de lead binnen seconden en plant direct een offerte-afspraak in uw agenda.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>U krijgt de afspraak</h3>
+                    <p>De afspraak staat in uw agenda. <strong>Alleen dan betaalt u een vast bedrag.</strong> Geen afspraak, geen kosten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <h2>Eerlijke Prijzen</h2>
+            <div class="pricing-card">
+                <h3>Pay-Per-Appointment</h3>
+                <div class="price">€ 0/maand</div>
+                <p>+ <strong>€ 99 per gerealiseerde afspraak</strong></p>
+                <p>Alleen betalen voor wat oplevert</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Veelgestelde Vragen</h2>
+            <div class="faq-item">
+                <h3>Wat kost dit?</h3>
+                <p><strong>Niets per maand.</strong> U betaalt een vaste vergoeding (€ 99) per afspraak die onze AI voor u inplant en die daadwerkelijk doorgaat.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is de AI-telefoon echt goed?</h3>
+                <p>Ja, de AI klinkt natuurlijk, begrijpt de context en is 24/7 beschikbaar om geen enkele lead te missen. We testen uitgebreid voor de lancering.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Hoe snel zien we resultaat?</h3>
+                <p>Binnen 1-2 weken na onboarding ontvangt u de eerste afspraken, afhankelijk van uw regio en de snelheid van ad-goedkeuring.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="intake" class="form-section">
+        <div class="container">
+            <h2>Klaar voor meer afspraken?</h2>
+            <p>Vul het formulier in en we nemen binnen 24 uur contact met u op.</p>
+            
+            <div class="form-container">
+                <form id="intakeForm">
+                    <div class="form-group">
+                        <label for="bedrijfsnaam">Bedrijfsnaam</label>
+                        <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="naam">Uw naam</label>
+                        <input type="text" id="naam" name="naam" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefoon">Telefoonnummer</label>
+                        <input type="tel" id="telefoon" name="telefoon" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mailadres</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="werkgebied">Werkgebied (postcodes/gemeenten)</label>
+                        <input type="text" id="werkgebied" name="werkgebied" required>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="voorwaarden" name="voorwaarden" required>
+                        <label for="voorwaarden">Ik begrijp dat ik alleen betaal per gerealiseerde afspraak</label>
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">Verstuur Aanvraag</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ZonnepaneelAfspraken.nl - AI Appointment Setting</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('intakeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Bedankt voor uw aanmelding! We nemen binnen 24 uur contact met u op.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
