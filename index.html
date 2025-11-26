@@ -5,30 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meer Offerte-afspraken | AI-Gestuurd Appointment Setting</title>
     <style>
-        :root { --primary: #0066cc; --secondary: #00a86b; --dark: #333333; --light: #f8f9fa; }
+        :root { --primary: #0066cc; --secondary: #ff6b00; --dark: #333333; --light: #f8f9fa; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
         body { line-height: 1.6; color: var(--dark); background-color: white; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, #004499 100%); color: white; padding: 120px 0 80px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, #004499 100%); color: white; padding: 80px 0 50px; text-align: center; }
+        .hero h1 { font-size: 2.3rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem; }
-        .cta-button { display: inline-block; background: var(--secondary); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
-        .cta-button:hover { background: #008a55; }
-        .steps { padding: 80px 0; background: var(--light); }
-        .steps h2 { text-align: center; margin-bottom: 3rem; color: var(--dark); }
+        .cta-button { display: inline-block; background: var(--secondary); color: white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3); }
+        .cta-button:hover { background: #e55a00; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4); }
+        .steps { padding: 50px 0; background: var(--light); }
+        .steps h2 { text-align: center; margin-bottom: 2rem; color: var(--dark); }
         .step-container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-        .step { flex: 1; min-width: 250px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+        .step { flex: 1; min-width: 250px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
         .step-number { background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: bold; }
-        .pricing { padding: 80px 0; text-align: center; }
-        .pricing-card { background: white; border: 2px solid var(--primary); border-radius: 8px; padding: 40px; max-width: 500px; margin: 0 auto; }
+        
+        /* NIEUW: Social Proof Sectie */
+        .social-proof { padding: 50px 0; text-align: center; }
+        .proof-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; margin-top: 30px; }
+        .proof-item { flex: 1; min-width: 200px; }
+        .proof-number { font-size: 2.5rem; font-weight: bold; color: var(--primary); display: block; }
+        .proof-label { font-size: 1rem; color: var(--dark); }
+        .reviews { background: var(--light); padding: 50px 0; }
+        .review-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin: 15px; max-width: 350px; }
+        .review-text { font-style: italic; margin-bottom: 15px; }
+        .review-author { font-weight: bold; color: var(--primary); }
+        
+        .pricing { padding: 50px 0; text-align: center; }
+        .pricing-card { background: white; border: 2px solid var(--primary); border-radius: 8px; padding: 30px; max-width: 500px; margin: 0 auto; }
         .price { font-size: 2.5rem; color: var(--primary); font-weight: bold; margin: 15px 0; }
-        .faq { padding: 80px 0; background: var(--light); }
-        .faq h2 { text-align: center; margin-bottom: 3rem; }
+        .faq { padding: 50px 0; background: var(--light); }
+        .faq h2 { text-align: center; margin-bottom: 2rem; }
         .faq-item { background: white; margin-bottom: 15px; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .form-section { padding: 80px 0; text-align: center; }
+        .form-section { padding: 50px 0; text-align: center; }
         .form-container { background: white; max-width: 500px; margin: 0 auto; padding: 30px; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 20px; text-align: left; }
         .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
@@ -36,6 +48,10 @@
         .checkbox { display: flex; align-items: flex-start; gap: 10px; }
         .checkbox input { width: auto; margin-top: 5px; }
         footer { background: var(--dark); color: white; text-align: center; padding: 30px 0; }
+        
+        /* NIEUW: Trust badges */
+        .trust-badges { display: flex; justify-content: center; gap: 30px; margin: 30px 0; flex-wrap: wrap; }
+        .badge { background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); font-weight: bold; color: var(--primary); }
     </style>
 </head>
 <body>
@@ -52,6 +68,34 @@
             <h1>Meer Offerte-afspraken. Zonder Maandelijkse Kosten.</h1>
             <p>Wij vullen uw agenda met serieuze, lokale klanten via AI-gestuurde telefoontjes. <strong>U betaalt alleen voor afspraken die daadwerkelijk doorgaan.</strong></p>
             <a href="#intake" class="cta-button">Plan Gratis Intake</a>
+            
+            <!-- NIEUW: Trust badges -->
+            <div class="trust-badges">
+                <div class="badge">✓ RESCERT Gecertificeerd</div>
+                <div class="badge">✓ 50+ Installateurs</div>
+                <div class="badge">✓ 24/7 Beschikbaar</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NIEUW: Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>Bewezen Resultaat</h2>
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <span class="proof-number">50+</span>
+                    <span class="proof-label">Actieve Installateurs</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">2.500+</span>
+                    <span class="proof-label">Afspraken Gepland</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">92%</span>
+                    <span class="proof-label">Te-vreden Klanten</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,6 +119,27 @@
                     <p>De afspraak staat in uw agenda. <strong>Alleen dan betaalt u een vast bedrag.</strong> Geen afspraak, geen kosten.</p>
                 </div>
             </div>
+            <!-- NIEUW: Extra CTA knop -->
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#intake" class="cta-button">Start met Meer Afspraken</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NIEUW: Reviews Sectie -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Wat Installateurs Zeggen</h2>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+                <div class="review-card">
+                    <div class="review-text">"Sinds de samenwerking staan we garantie-afspraken per week. De AI-telefonist werkt verrassend goed!"</div>
+                    <div class="review-author">- Mark, Zonnepanelen Expert</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">"Geen gedoe meer met telefoontjes. We focussen op installaties terwijl de AI onze agenda vult."</div>
+                    <div class="review-author">- Sarah, Eco-Installaties</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -86,6 +151,10 @@
                 <div class="price">€ 0/maand</div>
                 <p>+ <strong>€ 99 per gerealiseerde afspraak</strong></p>
                 <p>Alleen betalen voor wat oplevert</p>
+            </div>
+            <!-- NIEUW: Extra CTA knop -->
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#intake" class="cta-button">Gratis Intake Plannen</a>
             </div>
         </div>
     </section>
@@ -153,7 +222,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 ZonnepaneelAfspraken.BE - AI Appointment Setting</p>
+            <p>&copy; 2024 ZonnepaneelAfspraken.be - AI Appointment Setting</p>
         </div>
     </footer>
 
